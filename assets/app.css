@@ -228,3 +228,24 @@ a.wa-flotante .wa-texto { color: #fff; text-decoration: none; }
 /* Portada: H1 más arriba */
 .hero { padding-top: clamp(1.75rem, 4vw, 3rem); }
 .hero:has(.fantasma) { padding-bottom: clamp(7rem, 17vw, 12rem); }
+
+/* Pie renovado */
+.pie { padding: 3.5rem 0 1.75rem; }
+.pie .pie-cols { grid-template-columns: 1fr; gap: 2.2rem; }
+@media (min-width: 52rem) { .pie .pie-cols { grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 2.5rem; } }
+.pie-marca img { display: block; width: 150px; height: auto; margin-bottom: 1rem; }
+.pie-marca p { margin: 0 0 1rem; color: #eadfe5; }
+.pie h2 { margin: 0 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid rgba(240,210,122,.3); }
+.pie p { color: #d9ccd3; line-height: 1.6; }
+.pie .pie-lista { gap: 0; }
+.pie .pie-lista li a { color: #eadfe5; text-decoration: none; padding: .38rem 0; transition: color .2s, padding-left .2s; }
+.pie .pie-lista li a:hover, .pie .pie-lista li a:focus-visible { color: #f0d27a; padding-left: .35rem; }
+.pie .pie-wa { display: inline-flex; align-items: center; gap: .55rem; padding: .7rem 1.1rem; border-radius: 999px; border: 1.5px solid #e8c765; color: #fff; text-decoration: none; font-weight: 600; background: rgba(214,51,108,.22); transition: background .2s; }
+.pie .pie-wa svg { fill: currentColor; stroke: none; flex: none; }
+.pie .pie-wa:hover, .pie .pie-wa:focus-visible { background: #c2255c; }
+.pie .legal { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+.pie .legal p { margin: 0; }
+.pie .legal a { text-decoration: none; color: #eadfe5; }
+.pie .legal p a:hover { color: #f0d27a; }
+.pie .firma { margin-top: 0; }
+.pie { padding-bottom: 5.5rem; }
