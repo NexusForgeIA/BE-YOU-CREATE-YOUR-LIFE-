@@ -166,3 +166,6 @@ details.faq p { margin: .6rem 0 0; color: var(--muted); }
   body { background: #fff; font-size: 12pt; }
   section { padding: 1rem 0; }
 }
+
+/* Imágenes de las tarjetas (ilustraciones propias) */
+.tarjeta .foto { display: block; width: calc(100% + 3.4rem); max-width: none; height: auto; aspect-ratio: 8 / 5; object-fit: cover; margin: -1.7rem -1.7rem 1.3rem; border-radius: var(--radius) var(--radius) 0 0; }
