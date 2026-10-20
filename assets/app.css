@@ -190,3 +190,14 @@ details.faq p { margin: .6rem 0 0; color: var(--muted); }
 .retrato { margin: 0; }
 .retrato img { display: block; width: 100%; max-width: 420px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(214,51,108,.14), 0 0 0 6px #fff, 0 0 0 7px #e8c765; margin: 0 auto; }
 .fundadora { align-items: center; margin-bottom: 2.5rem; }
+
+/* Botón flotante de WhatsApp */
+.wa-flotante { position: fixed; z-index: 60; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: .55rem; height: 58px; min-width: 58px; padding: 0 1rem; justify-content: center; border-radius: 999px; color: #fff; text-decoration: none; background: var(--grad-rosa); box-shadow: 0 10px 28px rgba(214,51,108,.38), 0 0 0 3px #fff; font-weight: 600; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+.wa-flotante:hover, .wa-flotante:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(214,51,108,.48), 0 0 0 3px #fff; }
+.wa-flotante:focus-visible { outline: 3px solid var(--oro-2); outline-offset: 4px; }
+.wa-icono { width: 30px; height: 30px; fill: currentColor; stroke: none; flex: none; }
+.wa-texto { display: none; }
+@media (min-width: 900px) { .wa-texto { display: inline; } }
+@media (prefers-reduced-motion: no-preference) { .wa-flotante::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 rgba(214,51,108,.45); animation: wa-pulso 2.8s ease-out infinite; pointer-events: none; } }
+@keyframes wa-pulso { 0% { box-shadow: 0 0 0 0 rgba(214,51,108,.45); } 70%, 100% { box-shadow: 0 0 0 16px rgba(214,51,108,0); } }
+@media print { .wa-flotante { display: none; } }
