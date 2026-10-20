@@ -185,3 +185,8 @@ details.faq p { margin: .6rem 0 0; color: var(--muted); }
 .semanas .etiqueta { margin-bottom: .5rem; }
 .semanas .sem-txt { display: block; }
 @media (min-width: 900px) { .semanas { grid-template-columns: repeat(3, 1fr); } }
+
+/* Quién soy: retrato */
+.retrato { margin: 0; }
+.retrato img { display: block; width: 100%; max-width: 420px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(214,51,108,.14), 0 0 0 6px #fff, 0 0 0 7px #e8c765; margin: 0 auto; }
+.fundadora { align-items: center; margin-bottom: 2.5rem; }
