@@ -201,3 +201,14 @@ details.faq p { margin: .6rem 0 0; color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .wa-flotante::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: 0 0 0 0 rgba(214,51,108,.45); animation: wa-pulso 2.8s ease-out infinite; pointer-events: none; } }
 @keyframes wa-pulso { 0% { box-shadow: 0 0 0 0 rgba(214,51,108,.45); } 70%, 100% { box-shadow: 0 0 0 16px rgba(214,51,108,0); } }
 @media print { .wa-flotante { display: none; } }
+
+/* Quién soy: retrato y tarjetas coherentes */
+.fundadora { grid-template-columns: 1fr; align-items: center; gap: 2rem; margin-bottom: 3rem; }
+@media (min-width: 52rem) { .fundadora { grid-template-columns: minmax(0, 380px) 1fr; gap: 4rem; } }
+.retrato { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--card); box-shadow: 0 24px 60px rgba(184,144,43,.14); }
+.retrato img { display: block; width: 100%; max-width: none; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border: 0; border-radius: 0; box-shadow: none; margin: 0; }
+.fundadora h2 { margin-top: 0; }
+.centrado-sec { margin-top: 0; }
+.tres-sobre { grid-template-columns: 1fr; margin-bottom: 2.5rem; }
+@media (min-width: 52rem) { .tres-sobre { grid-template-columns: repeat(3, 1fr); } }
+.tres-sobre .tarjeta .icono { margin-bottom: .8rem; }
