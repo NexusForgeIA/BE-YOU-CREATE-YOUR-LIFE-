@@ -316,3 +316,7 @@ a.wa-flotante .wa-texto { color: #fff; text-decoration: none; }
 .resumen-cita { margin: 0 0 1rem; padding: .8rem 1rem; background: var(--rosa-suave); border-radius: 10px; }
 #f-cita { margin-top: 1.8rem; }
 #f-cita[hidden] { display: none; }
+
+/* H1 rotatorio */
+.h1-anim { transition: opacity .45s ease, transform .45s ease; }
+.h1-anim.h1-fuera { opacity: 0; transform: translateY(10px); }
