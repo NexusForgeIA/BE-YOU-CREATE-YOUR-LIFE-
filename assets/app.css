@@ -224,3 +224,7 @@ a.wa-flotante .wa-texto { color: #fff; text-decoration: none; }
 /* Portada: logo más arriba y letras de fondo rellenas en dorado */
 .hero-logo { top: 36%; transform: translateY(-50%); }
 .fantasma { color: rgba(232,199,101,.30); -webkit-text-stroke: 2px rgba(184,144,43,.5); }
+
+/* Portada: H1 más arriba */
+.hero { padding-top: clamp(1.75rem, 4vw, 3rem); }
+.hero:has(.fantasma) { padding-bottom: clamp(7rem, 17vw, 12rem); }
