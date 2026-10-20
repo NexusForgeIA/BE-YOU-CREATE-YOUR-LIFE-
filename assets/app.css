@@ -290,3 +290,29 @@ a.wa-flotante .wa-texto { color: #fff; text-decoration: none; }
 .panel-cta .boton { background: #fff; color: #c2255c; box-shadow: none; }
 .panel-cta .boton.boton-sec { border-color: #fff; color: #fff; background: transparent; }
 .panel-cta .boton-sec:hover { background: rgba(255,255,255,.14); }
+
+/* Citas */
+.citas { display: grid; gap: 2rem; align-items: start; }
+@media (min-width: 52rem) { .citas { grid-template-columns: 1.1fr 1fr; gap: 3rem; } }
+.cita-bloque h2 { display: flex; align-items: center; gap: .8rem; font-size: 1.3rem; margin: 0 0 1.1rem; }
+.cita-bloque .paso-num { width: 36px; height: 36px; margin: 0; font-size: .95rem; flex: none; }
+.cal { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; }
+.cal-cab { display: flex; align-items: center; justify-content: space-between; margin-bottom: .8rem; }
+.cal-cab h3 { margin: 0; font-size: 1.1rem; }
+.cal-nav { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #e8c765; background: #fff; color: var(--rosa); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.cal-nav:disabled { opacity: .35; cursor: default; }
+.cal-nav:focus-visible, .cal-dia:focus-visible, .hora:focus-visible { outline: 3px solid var(--oro-2); outline-offset: 2px; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-sem { text-align: center; font-size: .75rem; font-weight: 600; letter-spacing: .08em; color: var(--oro-texto); padding: .3rem 0; }
+.cal-dia { aspect-ratio: 1; min-height: 40px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: #b9aab2; font: inherit; font-weight: 500; cursor: default; }
+.cal-dia.libre { color: var(--text); background: var(--bg2, #fff7f9); border-color: var(--line); cursor: pointer; font-weight: 600; }
+.cal-dia.libre:hover { border-color: #e8c765; background: var(--oro-suave); }
+.cal-dia.sel { background: var(--grad-rosa); color: #fff; border-color: #e8c765; box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px #e8c765; }
+.dia-elegido { font-family: var(--display); font-weight: 600; margin: 0 0 .8rem; }
+.horas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr)); gap: .6rem; margin-bottom: .8rem; }
+.hora { min-height: 44px; border-radius: 999px; border: 1.5px solid #e8c765; background: #fff; font: inherit; font-weight: 600; color: var(--text); cursor: pointer; }
+.hora:hover { background: var(--oro-suave); }
+.hora.sel { background: var(--grad-rosa); color: #fff; border-color: #e8c765; }
+.resumen-cita { margin: 0 0 1rem; padding: .8rem 1rem; background: var(--rosa-suave); border-radius: 10px; }
+#f-cita { margin-top: 1.8rem; }
+#f-cita[hidden] { display: none; }
