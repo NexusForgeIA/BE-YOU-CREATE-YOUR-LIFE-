@@ -220,3 +220,7 @@ a.wa-flotante .wa-texto { color: #fff; text-decoration: none; }
 
 /* BE YOU de fondo: centrado y en dorado */
 .fantasma { left: 50%; right: auto; transform: translateX(-50%); bottom: -9%; font-size: clamp(6rem, 21vw, 19rem); -webkit-text-stroke: 2px rgba(184,144,43,.38); text-align: center; }
+
+/* Portada: logo más arriba y letras de fondo rellenas en dorado */
+.hero-logo { top: 36%; transform: translateY(-50%); }
+.fantasma { color: rgba(232,199,101,.30); -webkit-text-stroke: 2px rgba(184,144,43,.5); }
