@@ -1,0 +1,40 @@
+// Menú móvil y formulario de primera conversación. Todo texto va con textContent.
+import { ASUNTO, CORREO_CONTACTO } from "./config.js";
+
+document.documentElement.classList.add("js");
+const boton = document.querySelector(".menu-boton");
+const nav = document.getElementById("navegacion");
+if (boton && nav) {
+  boton.addEventListener("click", () => {
+    const abierto = nav.classList.toggle("abierto");
+    boton.setAttribute("aria-expanded", String(abierto));
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && nav.classList.contains("abierto")) { nav.classList.remove("abierto"); boton.setAttribute("aria-expanded", "false"); boton.focus(); } });
+}
+
+const form = document.getElementById("f-contacto");
+if (form) {
+  const estado = document.getElementById("estado");
+  const fallo = (t, campo) => { estado.textContent = t; estado.classList.add("error"); if (campo) form[campo].focus(); };
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    estado.classList.remove("error");
+    if (form.web.value) return; // campo trampa para bots
+    const nombre = form.nombre.value.trim();
+    const contacto = form.contacto.value.trim();
+    if (!nombre) return fallo("Dinos tu nombre, como prefieras que te llamemos.", "nombre");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto) && !/^\+?[\d\s]{9,15}$/.test(contacto)) return fallo("Escribe un correo o un teléfono para poder responderte.", "contacto");
+    if (!form.acepto.checked) return fallo("Necesitamos que aceptes la política de privacidad para poder contestarte.", "acepto");
+    if (!CORREO_CONTACTO) return fallo("El formulario todavía no está conectado. Vuelve pronto o escríbenos por las redes.");
+    const cuerpo = [
+      `Nombre: ${nombre}`, `Contacto: ${contacto}`,
+      `Encuentro que me interesa: ${form.interes.value}`,
+      `Modalidad: ${form.modalidad.value}`,
+      `Horario: ${form.horario.value}`,
+      form.mensaje.value.trim() ? `Mensaje: ${form.mensaje.value.trim()}` : "",
+    ].filter(Boolean).join("\n");
+    location.href = `mailto:${CORREO_CONTACTO}?subject=${encodeURIComponent(ASUNTO)}&body=${encodeURIComponent(cuerpo)}`;
+    estado.textContent = "Se ha abierto tu correo con el mensaje listo. Solo tienes que enviarlo.";
+  });
+}
+document.getElementById("imprimir")?.addEventListener("click", () => window.print());

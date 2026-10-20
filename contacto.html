@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quiero conocer BE YOU · BE YOU</title>
+  <meta name="description" content="Pide una primera conversación informativa de 15 minutos con BE YOU: qué encuentro te interesa, si prefieres presencial u online y qué horario te viene mejor.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:">
+  <link rel="stylesheet" href="assets/app.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="marca" href="index.html" aria-label="BE YOU · Create Your Life, inicio"><strong>BE YOU</strong><span>Create Your Life</span></a>
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="navegacion">Menú</button>
+      <nav id="navegacion" class="navegacion" aria-label="Principal"><a href="talleres.html">Talleres</a><a href="programa.html">Programa</a><a href="cursos.html">Cursos y recursos</a><a href="comunidad.html">Comunidad</a><a href="sobre.html">Quién soy</a><a class="boton" href="contacto.html" aria-current="page">Quiero conocer BE YOU</a></nav>
+    </div>
+  </header>
+  <main id="principal">
+    <section class="hero"><div class="contenedor"><p class="eyebrow">Primer paso</p><h1>Hablemos 15 minutos</h1><p class="lead">Una conversación informativa, sin compromiso. No necesitamos que nos cuentes detalles de tu situación: solo qué te interesa y cuándo te vendría bien.</p></div></section>
+    <section>
+      <div class="contenedor">
+        <form id="f-contacto" class="formulario" novalidate>
+          <label class="campo"><span>Tu nombre</span><input type="text" name="nombre" autocomplete="given-name" maxlength="60"></label>
+          <label class="campo"><span>Correo o teléfono para responderte</span><input type="text" name="contacto" autocomplete="email" maxlength="80"></label>
+          <label class="campo"><span>¿Qué tipo de encuentro te interesa?</span>
+            <select name="interes"><option>No lo sé todavía</option><option>Taller «Vuelve a ti»</option><option>Café, conexión y nuevas amistades</option><option>Separarse sin perderse (personas separadas con hijos)</option><option>Programa «Mi nueva etapa»</option><option>Círculo online</option></select></label>
+          <fieldset><legend>¿Prefieres participar…?</legend>
+            <div class="radios"><label><input type="radio" name="modalidad" value="Presencial" checked> Presencialmente</label><label><input type="radio" name="modalidad" value="Online"> Online</label><label><input type="radio" name="modalidad" value="Me da igual"> Me da igual</label></div></fieldset>
+          <label class="campo"><span>¿Qué horario te vendría mejor?</span>
+            <select name="horario"><option>Mañanas</option><option>Tardes</option><option>Noches</option><option>Fines de semana</option><option>Me adapto</option></select></label>
+          <label class="campo"><span>Algo que quieras añadir (opcional)</span><textarea name="mensaje" maxlength="500"></textarea></label>
+          <label class="trampa" aria-hidden="true">No rellenar<input type="text" name="web" tabindex="-1" autocomplete="off"></label>
+          <label class="consentimiento"><input type="checkbox" name="acepto"><span>He leído la <a href="privacidad.html">política de privacidad</a> y acepto que usen estos datos para contestarme.</span></label>
+          <button class="boton" type="submit">Enviar</button>
+          <p id="estado" class="estado" role="status" aria-live="polite"></p>
+        </form>
+        <div class="aviso"><p>Si estás en una situación de emergencia o de violencia, llama al <strong>112</strong>. BE YOU no es un servicio de urgencias.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="cols">
+        <div><h2>BE YOU</h2><p>Vuelve a ti. Reconstruye tu historia. Crea tu vida.</p><p><a class="boton" href="contacto.html">Quiero conocer BE YOU</a></p></div>
+        <div><h2>Explorar</h2><ul><li><a href="talleres.html">Talleres</a></li><li><a href="programa.html">Programa</a></li><li><a href="cursos.html">Cursos y recursos</a></li><li><a href="comunidad.html">Comunidad</a></li><li><a href="sobre.html">Quién soy</a></li><li><a href="7-preguntas.html">7 preguntas para volver a ti</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+        <div><h2>Importante</h2><p>BE YOU es un espacio de apoyo mutuo, educación emocional y acompañamiento. No es psicoterapia ni sustituye la atención de un profesional sanitario.</p></div>
+      </div>
+      <div class="legal">
+        <p><a href="privacidad.html">Privacidad</a> · <a href="aviso-legal.html">Aviso legal</a></p>
+        <a class="firma" href="https://whitemoon.es" target="_blank" rel="noopener"><picture><source srcset="assets/img/whitemoon-logo-3d.webp" type="image/webp"><img src="assets/img/whitemoon-logo-3d.png" width="40" height="40" alt="WhiteMoon" loading="lazy" decoding="async"></picture><span>Web desarrollada por WhiteMoon Agencia IA</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
